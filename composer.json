@@ -34,7 +34,7 @@
     "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/travelsetogreenland/travels/issues",
+    "issues": "https://github.com/travelsetogreenland/travels/issues"
   },
   "autoload": {
     "psr-4": {
