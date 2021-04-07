@@ -32,7 +32,6 @@
                                 <img class="brand-logo-light" src="{{ $siteIcon }}" alt="" width="512"
                                      height="32" />
                             @endif
-
                             {{ $siteName }}
                         </a>
                         {{ $siteDescription }}
