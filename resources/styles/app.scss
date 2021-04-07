@@ -136,6 +136,10 @@ hr {
   border-top: 1px solid $gray-light;
 }
 
+figure {
+  margin: 0;
+}
+
 /*
 *
 * Typography
@@ -325,8 +329,8 @@ code,
 //
 .page {
   position: relative;
-  overflow: hidden;
   min-height: 100vh !important;
+  margin: 0;
 }
 
 // Page header
@@ -386,7 +390,17 @@ code,
   }
 }
 
-//toggle
+// Wordpress Guthenberg custom
+
+.wp-block-cover.has-background-dim:not([class*="-background-color"]) {
+  background-color: rgba(0,0,0,0);
+}
+
+.wp-block-cover a {
+  color: white;
+}
+
+// toggle
 [data-custom-toggle] {
   cursor: pointer;
 }
