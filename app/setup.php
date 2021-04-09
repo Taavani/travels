@@ -14,16 +14,16 @@ use function Roots\asset;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), ['jquery'], null, true);
-    wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js'], null, true);
+    wp_enqueue_script('travels/vendor.js', asset('scripts/vendor.js')->uri(), ['jquery'], null, true);
+    wp_enqueue_script('travels/app.js', asset('scripts/app.js')->uri(), ['travels/vendor.js'], null, true);
 
-    wp_add_inline_script('sage/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
+    wp_add_inline_script('travels/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
 
-    wp_enqueue_style('sage/app.css', asset('styles/app.css')->uri(), false, null);
+    wp_enqueue_style('travels/app.css', asset('styles/app.css')->uri(), false, null);
 }, 100);
 
 /**
@@ -33,13 +33,12 @@ add_action('wp_enqueue_scripts', function () {
  */
 add_action('enqueue_block_editor_assets', function () {
     if ($manifest = asset('scripts/manifest.asset.php')->get()) {
-        wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), ...array_values($manifest));
-        wp_enqueue_script('sage/editor.js', asset('scripts/editor.js')->uri(), ['sage/vendor.js'], null, true);
-
-        wp_add_inline_script('sage/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
+        wp_enqueue_script('travels/vendor.js', asset('scripts/vendor.js')->uri(), ...array_values($manifest));
+        wp_enqueue_script('travels/editor.js', asset('scripts/editor.js')->uri(), ['travels/vendor.js'], null, true);
+        wp_add_inline_script('travels/vendor.js', asset('scripts/manifest.js')->contents(), 'before');
     }
 
-    wp_enqueue_style('sage/editor.css', asset('styles/editor.css')->uri(), false, null);
+    wp_enqueue_style('travels/editor.css', asset('styles/editor.css')->uri(), false, null);
 }, 100);
 
 /**
@@ -54,6 +53,8 @@ add_action('after_setup_theme', function () {
      */
     add_theme_support('soil', [
         'clean-up',
+        'disable-rest-api',
+        'js-to-footer',
         'nav-walker',
         'nice-search',
         'relative-urls'
@@ -64,7 +65,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'travels')
     ]);
 
     /**
@@ -186,12 +187,12 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Primary', 'sage'),
+        'name' => __('Primary', 'travels'),
         'id' => 'sidebar-primary'
     ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
+        'name' => __('Footer', 'travels'),
         'id' => 'sidebar-footer'
     ] + $config);
 });
