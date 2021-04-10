@@ -12,17 +12,7 @@ import domReady from '@wordpress/dom-ready';
 
 domReady(function () {
 
-    let blocks = window.wp.blocks;
     let __ = window.wp.i18n.__;
-    let element = window.wp.element;
-
-    let el = element.createElement;
-
-    let blockStyle = {
-        backgroundColor: '#900',
-        color: '#fff',
-        padding: '20px',
-    };
 
     registerBlockType(
         'travels/centered-content',

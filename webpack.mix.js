@@ -24,6 +24,7 @@ mix
     });
 
 mix
+    .js('resources/scripts/blocks/existing-products.js', 'scripts')
     .js('resources/scripts/blocks/centered-content.js', 'scripts')
     .js('resources/scripts/app.js', 'scripts')
     .js('resources/scripts/customizer.js', 'scripts')

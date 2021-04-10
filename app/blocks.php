@@ -13,4 +13,5 @@ use function Roots\asset;
  */
 add_action('init', function () {
     wp_enqueue_script('travels/centered-content.js', asset('scripts/centered-content.js')->uri(), [], null, true);
+    wp_enqueue_script('travels/existing-products.js', asset('scripts/existing-products.js')->uri(), [], null, true);
 });
