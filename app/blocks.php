@@ -14,4 +14,6 @@ use function Roots\asset;
 add_action('init', function () {
     wp_enqueue_script('travels/centered-content.js', asset('scripts/centered-content.js')->uri(), [], null, true);
     wp_enqueue_script('travels/existing-products.js', asset('scripts/existing-products.js')->uri(), [], null, true);
+    wp_enqueue_script('travels/new-itinerary.js', asset('scripts/new-itinerary.js')->uri(), [], null, true);
+    wp_enqueue_script('travels/local-connection.js', asset('scripts/local-connection.js')->uri(), [], null, true);
 });
