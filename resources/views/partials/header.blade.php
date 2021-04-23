@@ -28,8 +28,8 @@
                     </button>
                     <div class="rd-navbar-brand">
                         <a class="brand" href="{{ $siteUrl }}">
-                            @if ($siteIcon)
-                                <img class="brand-logo-light" src="{{ $siteIcon }}" alt="" width="512"
+                            @if (isset($siteIcon))
+                                <img class="brand-logo-light" src="{{ $siteIcon }}" alt="" width="32"
                                      height="32" />
                             @endif
                             {{ $siteName }}

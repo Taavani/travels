@@ -1,9 +1,10 @@
 /** @section Brand */
 
 .brand {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 
-	.brand-logo-light { display: none; }
+	.brand-logo-light { display: block; }
 
 	.brand-logo-dark { display: block; }
 }
