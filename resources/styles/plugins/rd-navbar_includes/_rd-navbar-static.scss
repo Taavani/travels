@@ -444,6 +444,11 @@
 		}
 	}
 
+	// Work around for the Wordpress admin-bar
+	.admin-bar &.rd-navbar--is-stuck, &.rd-navbar--is-clone {
+		margin-top: 32px;
+	}
+
 	// States
 	&.rd-navbar--is-stuck,
 	&.rd-navbar--is-clone {

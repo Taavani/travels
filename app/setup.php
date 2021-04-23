@@ -14,7 +14,11 @@ use function Roots\asset;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('travels/app.js', asset('scripts/app.js')->uri(), ['travels/vendor.js'], null, true);
+    $vendor = 'travels/vendor.js';
+    wp_enqueue_script($vendor, asset('scripts/vendor.js')->uri(), ['jquery'], null, true);
+    wp_enqueue_script('travels/app.js', asset('scripts/app.js')->uri(), [ $vendor, 'jquery' ], null, true);
+
+    wp_add_inline_script($vendor, asset('scripts/manifest.js')->contents(), 'before');
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -29,8 +33,13 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('enqueue_block_editor_assets', function () {
-    if (asset('scripts/manifest.asset.php')->get()) {
+    $manifest = asset('scripts/manifest.asset.php')->load();
+    if ($manifest) {
+        $vendor = 'travels/vendor.js';
+        wp_enqueue_script($vendor, asset('scripts/vendor.js')->uri(), ...array_values($manifest));
         wp_enqueue_script('travels/editor.js', asset('scripts/editor.js')->uri(), ['travels/vendor.js'], null, true);
+
+        wp_add_inline_script($vendor, asset('scripts/manifest.js')->contents(), 'before');
     }
 
     wp_enqueue_style('travels/editor.css', asset('styles/editor.css')->uri(), false, null);

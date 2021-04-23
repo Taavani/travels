@@ -208,7 +208,7 @@ $h6-line-height: ($_h6-lh / $_h6-fsz);
 $fa:  'FontAwesome';
 $mdi: 'Material Design Icons';
 $mi:  'Material Icons';
-$font-icons:              "Linearicons";
+$font-icons: "Linearicons";
 
 // Lead
 $lead-font-size:   24px;
@@ -452,3 +452,6 @@ $btn-lh-size:             1.2;
 // Border radius
 
 $border-radius-small:     4px;
+
+// Font-awesome
+$fa-font-path: "../fonts";

@@ -1,29 +1,30 @@
 /**
  * External Dependencies
  */
-// import $ from 'jquery';
 
-// window.$ = window.jQuery = $;
+import 'jquery'
+import 'rd-navbar/dist/js/jquery.rd-navbar';
 
-// import 'rd-navbar/dist/js/jquery.rd-navbar';
-/*
-$(document).ready(function () {
+$(document).ready(() => {
+
+    // Initialize defaults
     let userAgent = navigator.userAgent.toLowerCase();
-    // initialDate = new Date(),
-
-    // $document = $(document),
-    // $window = $(window),
+    let initialDate = new Date();
+    let $document = $(document);
+    let $window = $(window);
     let $html = $("html");
-    // $body = $("body"),
+    let $body = $("body");
 
-    // isDesktop = $html.hasClass("desktop"),
-    // isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1,
-    // isRtl = $html.attr("dir") === "rtl",
-    // isIE = userAgent.indexOf("msie") !== -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") !== -1 ? 11 : userAgent.indexOf("edge") !== -1 ? 12 : false,
-    // isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
-    // isNoviBuilder = false,
-    // windowReady = false,
+    // Preform checks
+    let isDesktop = $html.hasClass("desktop");
+    let isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+    let isRtl = $html.attr("dir") === "rtl";
+    let isIE = userAgent.indexOf("msie") !== -1 ? parseInt(userAgent.split("msie")[1], 10) : userAgent.indexOf("trident") !== -1 ? 11 : userAgent.indexOf("edge") !== -1 ? 12 : false;
+    let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // let isNoviBuilder = false;
+    let windowReady = false;
 
+    // Load plugins
     let plugins = {
         // bootstrapTooltip: $('[data-toggle="tooltip"]'),
         // bootstrapModalDialog: $('.modal'),
@@ -74,7 +75,7 @@ $(document).ready(function () {
         // progressLinear: document.querySelectorAll('.progress-linear'),
         // progressCircle: document.querySelectorAll('.progress-circle'),
         // countdown: document.querySelectorAll('.countdown')
-    };
+    }
 
     // RD Navbar
     if (plugins.rdNavbar.length) {
@@ -139,10 +140,9 @@ $(document).ready(function () {
             }
         });
 
-
         if (plugins.rdNavbar.attr("data-body-class")) {
             document.body.className += ' ' + plugins.rdNavbar.attr("data-body-class");
         }
     }
 });
-*/
+

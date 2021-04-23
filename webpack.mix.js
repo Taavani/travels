@@ -24,10 +24,10 @@ mix
     });
 
 mix
-    .js('resources/scripts/blocks/local-connection.js', 'scripts')
-    .js('resources/scripts/blocks/new-itinerary.js', 'scripts')
-    .js('resources/scripts/blocks/existing-products.js', 'scripts')
-    .js('resources/scripts/blocks/centered-content.js', 'scripts')
+    // .js('resources/scripts/blocks/local-connection.js', 'scripts')
+    // .js('resources/scripts/blocks/new-itinerary.js', 'scripts')
+    // .js('resources/scripts/blocks/existing-products.js', 'scripts')
+    // .js('resources/scripts/blocks/centered-content.js', 'scripts')
     .js('resources/scripts/app.js', 'scripts')
     .js('resources/scripts/customizer.js', 'scripts')
     .blocks('resources/scripts/editor.js', 'scripts')
@@ -36,7 +36,11 @@ mix
 
 mix
     .copyDirectory('resources/images', 'public/images')
-    .copyDirectory('resources/fonts', 'public/fonts');
+    .copyDirectory('resources/fonts', 'public/fonts')
+    .copy(
+        'node_modules/@fortawesome/fontawesome-free/webfonts',
+        'public/fonts'
+    );
 
 mix
     .sourceMaps()
