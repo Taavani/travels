@@ -47,6 +47,7 @@ add_action('enqueue_block_editor_assets', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
+
     /**
      * Enable features from the Soil plugin if activated.
      * @link https://roots.io/plugins/soil/
@@ -171,6 +172,41 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/themes/advanced-topics/customizer-api/#theme-support-in-sidebars
      */
     add_theme_support('customize-selective-refresh-widgets');
+
+    /**
+     * Setup default properties for the page.
+     */
+    // Set the blogdescription
+    update_option('blogdescription', '');
+    update_option('show_on_front', 'page');
+
+    // Check for the default pages
+    // Check if the page Main is created
+    if (! get_page_by_title('Main')) {
+        // If not create the page and set it as the main page.
+        $id = wp_insert_post([
+            'post_title' => 'Main',
+            'post_status' => 'publish',
+            'post_author' => 1,
+            'post_type' => 'page'
+        ]);
+        update_option('page_on_front', $id);
+        update_option('blog_public', $id);
+    }
+
+    // Check if the page Blog is created
+    if (! get_page_by_title('Blog')) {
+        // If not create the page and set it as the blog page.
+        $id = wp_insert_post([
+            'post_title' => 'Blog',
+            'post_status' => 'publish',
+            'post_author' => 1,
+            'post_type' => 'page'
+        ]);
+        update_option('page_for_posts', $id);
+    }
+
+
 }, 20);
 
 /**
