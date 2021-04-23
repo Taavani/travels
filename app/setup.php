@@ -33,10 +33,10 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('enqueue_block_editor_assets', function () {
-    $manifest = asset('scripts/manifest.asset.php')->load();
-    if ($manifest) {
+    $manifest = asset('scripts/manifest.asset.php');
+    if ($manifest = asset('scripts/manifest.asset.php')) {
         $vendor = 'travels/vendor.js';
-        wp_enqueue_script($vendor, asset('scripts/vendor.js')->uri(), ...array_values($manifest));
+        wp_enqueue_script($vendor, asset('scripts/vendor.js')->uri(), ...array_values([ $manifest->uri() ]));
         wp_enqueue_script('travels/editor.js', asset('scripts/editor.js')->uri(), ['travels/vendor.js'], null, true);
 
         wp_add_inline_script($vendor, asset('scripts/manifest.js')->contents(), 'before');
