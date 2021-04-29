@@ -41,6 +41,23 @@
                 <div class="rd-navbar-nav-wrap">
                     @if (has_nav_menu('primary_navigation'))
                       {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'rd-navbar-nav', 'echo' => false]) !!}
+                    @else
+                        <div class="default-menu">
+                            <ul class="rd-navbar-nav">
+                                <li>
+                                    <a href="#introduction">Introduction</a>
+                                </li>
+                                <li>
+                                    <a href="#meet-the-locals">Meet the locals</a>
+                                </li>
+                                <li>
+                                    <a href="#the-seasons-are-changing">The season are changing</a>
+                                </li>
+                                <li>
+                                    <a href="#contact-us">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
                     @endif
                 </div>
             </div>

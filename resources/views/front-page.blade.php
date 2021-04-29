@@ -2,41 +2,51 @@
 
 @section('content')
     <section class="section">
-        <div class="swiper-container swiper-slider swiper-slider_fullheight swiper-container-initialized swiper-container-horizontal" data-simulate-touch="false" data-loop="true">
-            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1620px, 0px, 0px);"><div class="swiper-slide swiper-slide_top bg-accent swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-prev" data-slide-bg="images/main/3-2400.tiff" data-swiper-slide-index="0" style="width: 1620px; background-image: url(&quot;images/main/3-2400.tiff&quot;);">
+        <div class="swiper-container swiper-slider swiper-slider_fullheight swiper-container-initialized swiper-container-horizontal"
+             data-simulate-touch="false" data-loop="true">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1620px, 0px, 0px);">
+                <div class="swiper-slide swiper-slide_top bg-accent swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-prev"
+                     data-slide-bg="images/main/3-2400.tiff" data-swiper-slide-index="0"
+                     style="width: 1620px; background-image: url({{ $firstImage }});">
                     <div class="swiper-slide-caption">
                         <div class="container">
                             <h2 data-caption-animate="fadeInLeftSmall" class="not-animated">
                                 Looking for a Greenlandic adventure?<br class="d-none d-lg-block">
                             </h2>
                             <p data-caption-animate="fadeInLeftSmall" class="not-animated">
-                                <a class="brand" href="https://travelstogreenland.com/en">#TravelsToGreenland</a> is here to help you on
+                                <a class="brand" href="{{ $siteUrl }}">#TravelsToGreenland</a> is here to help you on
                                 your way.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide swiper-slide_top bg-accent swiper-slide-active swiper-slide-duplicate-next swiper-slide-duplicate-prev" data-slide-bg="images/main/3-2400.tiff" data-swiper-slide-index="0" style="width: 1620px; background-image: url(&quot;images/main/3-2400.tiff&quot;);">
+                <div class="swiper-slide swiper-slide_top bg-accent swiper-slide-active swiper-slide-duplicate-next swiper-slide-duplicate-prev"
+                     data-slide-bg="images/main/3-2400.tiff" data-swiper-slide-index="0"
+                     style="width: 1620px; background-image: url({{ $firstImage }});">
                     <div class="swiper-slide-caption">
                         <div class="container">
                             <h2 data-caption-animate="fadeInLeftSmall" class="fadeInLeftSmall animated">
                                 Looking for a Greenlandic adventure?<br class="d-none d-lg-block">
                             </h2>
                             <p data-caption-animate="fadeInLeftSmall" class="fadeInLeftSmall animated">
-                                <a class="brand" href="https://travelstogreenland.com/en">#TravelsToGreenland</a> is here to help you on
+                                <a class="brand" href="{{ $siteUrl }}">#TravelsToGreenland</a> is
+                                here to help you on
                                 your way.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide swiper-slide_top bg-accent swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-next" data-slide-bg="images/main/3-2400.tiff" data-swiper-slide-index="0" style="width: 1620px; background-image: url(&quot;images/main/3-2400.tiff&quot;);">
+                <div class="swiper-slide swiper-slide_top bg-accent swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-next"
+                     data-slide-bg="images/main/3-2400.tiff" data-swiper-slide-index="0"
+                     style="width: 1620px; background-image: url({{ $firstImage }});">
                     <div class="swiper-slide-caption">
                         <div class="container">
                             <h2 data-caption-animate="fadeInLeftSmall" class="not-animated">
                                 Looking for a Greenlandic adventure?<br class="d-none d-lg-block">
                             </h2>
                             <p data-caption-animate="fadeInLeftSmall" class="not-animated">
-                                <a class="brand" href="https://travelstogreenland.com/en">#TravelsToGreenland</a> is here to help you on
+                                <a class="brand" href="{{ $siteUrl }}">#TravelsToGreenland</a> is
+                                here to help you on
                                 your way.
                             </p>
                         </div>
@@ -44,7 +54,9 @@
                 </div>
             </div>
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-        <div style="position: relative;top: -40px;z-index: 1;color: white;padding-right: 20px;float: right;">Photo by Klaus Eugenius - Visit Greenland</div>
+        <div style="position: relative;top: -40px;z-index: 1;color: white;padding-right: 20px;float: right;">Photo by
+            Klaus Eugenius - Visit Greenland
+        </div>
     </section>
     <section id="introduction" class="section novi-bg novi-bg-img section-xl bg-default text-center">
         <div class="container">
@@ -277,7 +289,7 @@
             </div>
         </div>
         <div class="novi-bg-img object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image"
-             style="background-image: url('images/locals/2-2400.jpg')">
+             style="background-image: url({{ $localsImage }})">
         </div>
         <div style="position: relative;top: -40px;color: white;padding-right: 20px;float: right;height: 0;">Photo
             by Mads Pihl - Visit Greenland
@@ -297,29 +309,37 @@
                 <div class="col-md-9 col-lg-6" data-lightgallery="group">
                     <div class="row gallery-wrap">
                         <div class="col-6">
-                            <a class="thumb-modern" data-sub-html="Photo by Ben Haggar - Visit Greenland" data-lightgallery="item" href="images/roundview/1-b-1200.jpg">
-                                <figure><img src="images/roundview/1-b-600.jpg" alt="" width="472" height="355">
+                            <a class="thumb-modern" data-sub-html="Photo by Ben Haggar - Visit Greenland"
+                               data-lightgallery="item" href="{{ $firstSeasonsGalleryImage }}">
+                                <figure>
+                                    <img src="{{ $firstSeasonsPlaceholderImage }}" alt="" width="472" height="355">
                                 </figure>
                                 <div class="thumb-modern__overlay"></div>
                             </a>
                         </div>
                         <div class="col-6">
-                            <a class="thumb-modern" data-lightgallery="item" data-sub-html="Photo by Chris Brin Lee Jr. - Visit Greenland" href="images/roundview/1-c-1200.jpg">
-                                <figure><img src="images/roundview/1-c-600.jpg" alt="" width="472" height="355">
+                            <a class="thumb-modern" data-lightgallery="item"
+                               data-sub-html="Photo by Chris Brin Lee Jr. - Visit Greenland"
+                               href="{{ $secondSeasonsGalleryImage }}">
+                                <figure><img src="{{ $secondSeasonsPlaceholderImage }}" alt="" width="472" height="355">
                                 </figure>
                                 <div class="thumb-modern__overlay"></div>
                             </a>
                         </div>
                         <div class="col-6">
-                            <a class="thumb-modern" data-lightgallery="item" data-sub-html="Photo by Mads Pihl - Visit Greenland" href="images/roundview/1-d-1200.jpg">
-                                <figure><img src="images/roundview/1-d-600.jpg" alt="" width="472" height="355">
+                            <a class="thumb-modern" data-lightgallery="item"
+                               data-sub-html="Photo by Mads Pihl - Visit Greenland"
+                               href="{{ $thirdSeasonsGalleryImage }}">
+                                <figure><img src="{{ $thirdSeasonsPlaceholderImage }}" alt="" width="472" height="355">
                                 </figure>
                                 <div class="thumb-modern__overlay"></div>
                             </a>
                         </div>
                         <div class="col-6">
-                            <a class="thumb-modern" data-lightgallery="item" data-sub-html="Photo by Mads Pihl - Visit Greenland" href="images/roundview/1-k-1200.jpg">
-                                <figure><img src="images/roundview/1-k-600.jpg" alt="" width="472" height="355">
+                            <a class="thumb-modern" data-lightgallery="item"
+                               data-sub-html="Photo by Mads Pihl - Visit Greenland"
+                               href="{{ $forthSeasonsGalleryImage }}">
+                                <figure><img src="{{ $forthSeasonsPlaceholderImage }}" alt="" width="472" height="355">
                                 </figure>
                                 <div class="thumb-modern__overlay"></div>
                             </a>
@@ -340,31 +360,42 @@
             </p>
             <div class="row justify-content-lg-center">
                 <div class="col-lg-10 col-xl-8">
-                    <form class="rd-mailform rd-mailform_style-1 text-center" data-form-output="form-output-global" data-form-type="contact" method="post" action="https://travelstogreenland.com/en" novalidate="novalidate">
-                        <input type="hidden" name="_token" value="djkicvAPmH4aibKC9B5pcH2ybn1aaCeKb4xZ7KaR">                    <div class="form-wrap form-wrap_icon">
+                    <form class="rd-mailform rd-mailform_style-1 text-center" data-form-output="form-output-global"
+                          data-form-type="contact" method="post" action="https://travelstogreenland.com/en"
+                          novalidate="novalidate">
+                        <input type="hidden" name="_token" value="djkicvAPmH4aibKC9B5pcH2ybn1aaCeKb4xZ7KaR">
+                        <div class="form-wrap form-wrap_icon">
                             <span class="novi-icon form-icon linear-icon-man"></span>
-                            <input class="form-input form-control-has-validation" id="contact-name" type="text" name="name" data-constraints="@Required" heap-ignore="true"><span class="form-validation"></span>
+                            <input class="form-input form-control-has-validation" id="contact-name" type="text"
+                                   name="name" data-constraints="@Required" heap-ignore="true"><span
+                                    class="form-validation"></span>
                             <label class="form-label rd-input-label" for="contact-name">
                                 Your name
                             </label>
                         </div>
                         <div class="form-wrap form-wrap_icon">
                             <span class="novi-icon form-icon linear-icon-envelope"></span>
-                            <input class="form-input form-control-has-validation" id="contact-email" type="email" name="email" data-constraints="@Email  @Required" heap-ignore="true"><span class="form-validation"></span>
+                            <input class="form-input form-control-has-validation" id="contact-email" type="email"
+                                   name="email" data-constraints="@Email  @Required" heap-ignore="true"><span
+                                    class="form-validation"></span>
                             <label class="form-label rd-input-label" for="contact-email">
                                 Your e-mail
                             </label>
                         </div>
                         <div class="form-wrap form-wrap_icon">
                             <span class="novi-icon form-icon linear-icon-telephone"></span>
-                            <input class="form-input form-control-has-validation" id="contact-phone" type="text" name="phone" data-constraints="@Numeric" heap-ignore="true"><span class="form-validation"></span>
+                            <input class="form-input form-control-has-validation" id="contact-phone" type="text"
+                                   name="phone" data-constraints="@Numeric" heap-ignore="true"><span
+                                    class="form-validation"></span>
                             <label class="form-label rd-input-label" for="contact-phone">
                                 Your phone
                             </label>
                         </div>
                         <div class="form-wrap form-wrap_icon">
                             <span class="novi-icon form-icon linear-icon-feather"></span>
-                            <textarea class="form-input form-control-has-validation" id="contact-message" name="message" data-constraints="@Required" heap-ignore="true"></textarea><span class="form-validation"></span>
+                            <textarea class="form-input form-control-has-validation" id="contact-message" name="message"
+                                      data-constraints="@Required" heap-ignore="true"></textarea><span
+                                    class="form-validation"></span>
                             <label class="form-label rd-input-label" for="contact-message">
                                 Your message
                             </label>
@@ -386,8 +417,10 @@
                         </script>
                         <div style="display:  none ;">
                             <input wire:model.lazy.defer="honeyInputs.honey_present" name="honey_present" value="">
-                            <input wire:model.lazy.defer="honeyInputs.honey_time" name="honey_time" value="eyJpdiI6IlRXaCtMUmlZVGZ3bHNTOUJRT3dXTWc9PSIsInZhbHVlIjoidjVtYVdmNVROU01jNzFKNEg5R3VGQmhwZytvc1ZzU2MwWUN3T1QyUktIST0iLCJtYWMiOiIyMDE3NDhhYjVkZWMyZTYwOWQwZGJlYjAwOTBlNTc5MDA1OGQ4OTBmNTk4ZDJjMDFjMjM0YTI5ZjVhNTliOTUxIn0=">
-                            <input wire:model.lazy.defer="honeyInputs.honey_javascript" data-purpose="honey_javascript" name="honey_javascript" value="">
+                            <input wire:model.lazy.defer="honeyInputs.honey_time" name="honey_time"
+                                   value="eyJpdiI6IlRXaCtMUmlZVGZ3bHNTOUJRT3dXTWc9PSIsInZhbHVlIjoidjVtYVdmNVROU01jNzFKNEg5R3VGQmhwZytvc1ZzU2MwWUN3T1QyUktIST0iLCJtYWMiOiIyMDE3NDhhYjVkZWMyZTYwOWQwZGJlYjAwOTBlNTc5MDA1OGQ4OTBmNTk4ZDJjMDFjMjM0YTI5ZjVhNTliOTUxIn0=">
+                            <input wire:model.lazy.defer="honeyInputs.honey_javascript" data-purpose="honey_javascript"
+                                   name="honey_javascript" value="">
 
                         </div>
 

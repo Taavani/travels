@@ -3,6 +3,7 @@
 namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
+use function Roots\asset;
 
 /**
  * Class App
@@ -72,6 +73,6 @@ class App extends Composer
      */
     public function siteIcon($size = 512): string
     {
-        return get_site_icon_url($size);
+        return get_site_icon_url($size) ?: asset('images/android-chrome-512x512.png')->uri();
     }
 }
