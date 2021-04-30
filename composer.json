@@ -43,6 +43,7 @@
   },
   "require": {
     "php": "^7.3|^8.0",
+    "htmlburger/carbon-fields": "^3.3",
     "roots/acorn": "dev-main"
   },
   "require-dev": {

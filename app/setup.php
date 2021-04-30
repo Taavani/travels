@@ -6,6 +6,8 @@
 
 namespace App;
 
+use Carbon_Fields\Carbon_Fields;
+
 use function Roots\asset;
 
 /**
@@ -51,6 +53,17 @@ add_action('enqueue_block_editor_assets', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
+
+    /**
+     * Enable features from the Soil plugin if activated.
+     * @link https://roots.io/plugins/soil/
+     */
+    add_theme_support('soil', [
+        'clean-up',
+        'nav-walker',
+        'nice-search',
+        'relative-urls'
+    ]);
 
     /**
      * Register the navigation menus.
@@ -196,6 +209,9 @@ add_action('after_setup_theme', function () {
         ]);
         update_option('page_for_posts', $id);
     }
+
+    // Bootstrap CarbonFields
+    Carbon_Fields::boot();
 }, 20);
 
 /**
