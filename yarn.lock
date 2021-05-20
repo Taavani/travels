@@ -6139,11 +6139,6 @@ jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jquery@>=1.7.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
-  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
-
 jquery@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
@@ -6354,12 +6349,10 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lightgallery@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/lightgallery/-/lightgallery-1.10.0.tgz#74ae0c198784a235159885588842ed5123e14b94"
-  integrity sha512-3yjU2JATPFQxbcA0GglkWrdwC3Fjy9jjlvDymCrH4JizU2hN60z3r1Q4almFGcV/YFKIDWnD5k8o7zvFcTdaMg==
-  dependencies:
-    jquery ">=1.7.0"
+lightgallery@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/lightgallery/-/lightgallery-2.0.1.tgz#2df02e13a05d0c9a115c9725f8ddff3bbbfb05eb"
+  integrity sha512-4wvxbGulA7GYvn78kotAYTGd6chQC6FLKysU2KsQ7cWpjh+VVKy7TawbngQ0HxFr39AtuRGmPcW2IJy/10ElRQ==
 
 limiter@^1.0.5:
   version "1.1.5"
