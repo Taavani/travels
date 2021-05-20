@@ -782,9 +782,13 @@ $navbar-fullwidth-nav-indent: 30px;
     }
 
     > li {
+
       &.opened > a,
       &.active > a {
-        color: $primary;
+        color: black;
+        &:hover {
+          color: $primary;
+        }
       }
     }
   }
