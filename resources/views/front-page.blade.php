@@ -49,10 +49,10 @@
                     </p>
 
                     <div class="group-lg">
-                        <a href="#product-feedback" class="button button-primary">
+                        <a href="#product-feedback" data-scroll class="button button-primary">
                             Feedback on existing itinerary
                         </a>
-                        <a href="#product-itinerary" class="button button-primary">
+                        <a href="#product-itinerary" data-scroll class="button button-primary">
                             Your custom itinerary
                         </a>
                     </div>
@@ -115,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="pricing-footer">
-                                <a class="button button-primary" href="#contact-us">
+                                <a class="button button-primary" data-scroll href="#contact-us">
                                     Contact us
                                 </a>
                             </div>
@@ -231,7 +231,7 @@
                                 </div>
                             </div>
                             <div class="pricing-footer">
-                                <a class="button button-primary" href="#contact-us">
+                                <a class="button button-primary" data-scroll href="#contact-us">
                                     Contact us
                                 </a>
                             </div>
