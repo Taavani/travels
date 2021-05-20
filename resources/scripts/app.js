@@ -111,11 +111,11 @@ $(document).ready(() => {
         }
 
         plugins.rdNavbar.RDNavbar({
-            anchorNav:    true,
+            anchorNav: true,
             stickUpClone: (plugins.rdNavbar.attr("data-stick-up-clone")) ? plugins.rdNavbar.attr("data-stick-up-clone") === 'true' : false,
-            responsive:   responsiveNavbar,
-            callbacks:    {
-                onStuck:        function () {
+            responsive: responsiveNavbar,
+            callbacks: {
+                onStuck: function () {
                     var navbarSearch = this.$element.find('.rd-search input');
 
                     if (navbarSearch) {
@@ -125,7 +125,7 @@ $(document).ready(() => {
                 onDropdownOver: function () {
                     return true;
                 },
-                onUnstuck:      function () {
+                onUnstuck: function () {
                     if (this.$clone === null) {
                         return;
                     }
@@ -144,5 +144,30 @@ $(document).ready(() => {
             document.body.className += ' ' + plugins.rdNavbar.attr("data-body-class");
         }
     }
+
+    // Scroll on page
+    // Add data-scroll to navbar
+    $('.rd-navbar-brand a').each(function () {
+        $(this).attr('data-scroll', '');
+    })
+    $('.rd-navbar-nav .menu-item a').each(function () {
+        $(this).attr('data-scroll', '');
+    })
+
+    //
+    let elements = document.querySelectorAll('[data-scroll]')
+    elements.forEach(function (element) {
+        $(element).click(function (event) {
+            event.preventDefault()
+            let full_url = this.href;
+
+            let parts = full_url.split("#");
+            let trgt = parts[1];
+
+            let target_offset = $("#" + trgt).offset().top;
+
+            $('html, body').animate({scrollTop: target_offset}, 600);
+        })
+    })
 });
 
