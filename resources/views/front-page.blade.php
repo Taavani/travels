@@ -274,7 +274,7 @@
                         mountain climbing or just experiencing the greenlandic culture.
                     </p>
                 </div>
-                <div class="col-md-9 col-lg-6" data-lightgallery="group">
+                <div id="lg-gallery" class="col-md-9 col-lg-6">
                     <div class="row gallery-wrap">
                         <div class="col-6">
                             <a class="thumb-modern" data-sub-html="Photo by Ben Haggar - Visit Greenland"
@@ -289,7 +289,8 @@
                             <a class="thumb-modern" data-lightgallery="item"
                                data-sub-html="Photo by Chris Brin Lee Jr. - Visit Greenland"
                                href="{{ $secondSeasonsGalleryImage }}">
-                                <figure><img src="{{ $secondSeasonsPlaceholderImage }}" alt="" width="472" height="355">
+                                <figure>
+                                    <img src="{{ $secondSeasonsPlaceholderImage }}" alt="" width="472" height="355">
                                 </figure>
                                 <div class="thumb-modern__overlay"></div>
                             </a>
@@ -298,7 +299,8 @@
                             <a class="thumb-modern" data-lightgallery="item"
                                data-sub-html="Photo by Mads Pihl - Visit Greenland"
                                href="{{ $thirdSeasonsGalleryImage }}">
-                                <figure><img src="{{ $thirdSeasonsPlaceholderImage }}" alt="" width="472" height="355">
+                                <figure>
+                                    <img src="{{ $thirdSeasonsPlaceholderImage }}" alt="" width="472" height="355">
                                 </figure>
                                 <div class="thumb-modern__overlay"></div>
                             </a>
@@ -307,7 +309,8 @@
                             <a class="thumb-modern" data-lightgallery="item"
                                data-sub-html="Photo by Mads Pihl - Visit Greenland"
                                href="{{ $forthSeasonsGalleryImage }}">
-                                <figure><img src="{{ $forthSeasonsPlaceholderImage }}" alt="" width="472" height="355">
+                                <figure>
+                                    <img src="{{ $forthSeasonsPlaceholderImage }}" alt="" width="472" height="355">
                                 </figure>
                                 <div class="thumb-modern__overlay"></div>
                             </a>
