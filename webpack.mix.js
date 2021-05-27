@@ -23,21 +23,21 @@ mix
         processCssUrls: false
     });
 
-mix
+//mix
     // .js('resources/scripts/blocks/local-connection.js', 'scripts')
     // .js('resources/scripts/blocks/new-itinerary.js', 'scripts')
     // .js('resources/scripts/blocks/existing-products.js', 'scripts')
     // .js('resources/scripts/blocks/centered-content.js', 'scripts')
-    .js('resources/scripts/app.js', 'scripts')
-    .js('resources/scripts/customizer.js', 'scripts')
-    .blocks('resources/scripts/editor.js', 'scripts')
-    .autoload({ jquery: ['$', 'window.jQuery'] })
-    .extract();
+    // .js('resources/scripts/app.js', 'scripts')
+    // .js('resources/scripts/customizer.js', 'scripts')
+    // .blocks('resources/scripts/editor.js', 'scripts')
+    //.autoload({ jquery: ['$', 'window.jQuery'] });
+//    .extract();
 
 mix
     .copyDirectory('resources/images', 'public/images')
     .copy(
-        'node_modules/linearicons/dist/web-font/fonts',
+        'resources/fonts',
         'public/fonts'
     )
     .copy(

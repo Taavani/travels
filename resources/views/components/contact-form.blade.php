@@ -11,8 +11,8 @@
             <div class="col-lg-10 col-xl-8">
                 <form class="rd-mailform rd-mailform_style-1 text-center"
                       data-form-output="form-output-global"
-                      data-form-type="contact" method="post" action="{{ esc_url( admin_url('admin-post.php') ) }}"
-                      novalidate="novalidate">
+                      data-form-type="contact" method="post" action="{{ esc_url( admin_url('admin-ajax.php') ) }}"
+                    >
                     {!! $nounce !!}
                     <input type="hidden" name="action" value="{{ $methodName }}">
                     <div class="form-wrap form-wrap_icon">

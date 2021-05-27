@@ -45,8 +45,8 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
+    "jquery-form": "^4.3.0",
     "lightgallery": "^2.0.1",
-    "linearicons": "^1.0.2",
     "rd-navbar": "ZemezPlugins/rd-navbar"
   }
 }

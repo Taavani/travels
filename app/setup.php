@@ -16,8 +16,8 @@ use function Roots\asset;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    $vendor = 'travels/vendor.js';
-    wp_enqueue_script($vendor, asset('scripts/vendor.js')->uri(), ['jquery'], null, true);
+    $vendor = 'travels/bootstrap.js';
+    wp_enqueue_script($vendor, asset('scripts/bootstrap.js')->uri(), ['jquery'], null, true);
     wp_enqueue_script('travels/app.js', asset('scripts/app.js')->uri(), [ $vendor, 'jquery' ], null, true);
 
     wp_add_inline_script($vendor, asset('scripts/manifest.js')->contents(), 'before');

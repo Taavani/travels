@@ -13,5 +13,6 @@ use App\Consumers\ContactFormConsume;
  */
 add_action('after_setup_theme', function () {
 
-    new ContactFormConsume();
+    $contact_form = new ContactFormConsume();
+    $contact_form->bootstrap();
 });

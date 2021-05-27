@@ -3,6 +3,7 @@
 namespace App\Consumers;
 
 use App\View\Composers\ContactForm;
+use Carbon\Carbon;
 
 /**
  * Class ContactFormConsume
@@ -11,13 +12,13 @@ use App\View\Composers\ContactForm;
 class ContactFormConsume
 {
     /**
-     * ContactFormConsume constructor.
+     *
      */
-    public function __construct()
+    public function bootstrap()
     {
         if (function_exists('add_action')) {
-            add_action('admin_post_' . ContactForm::METHOD, [ $this, 'handlePost' ]);
-            add_action('admin_post_nopriv_' . ContactForm::METHOD, [ $this, 'handlePost' ]);
+            add_action('wp_ajax_' . ContactForm::METHOD, array( $this, 'handlePost' ));
+            add_action('wp_ajax_nopriv_' . ContactForm::METHOD, array( $this, 'handlePost' ));
         }
     }
 
@@ -35,17 +36,18 @@ class ContactFormConsume
      */
     public function handlePost()
     {
+
         if (! function_exists('wp_verify_nonce')) {
-            return 'MF255';
+            wp_send_json_error('MF255', '500');
         }
 
         $callbackURL = wp_get_referer();
         $wpnonce = $_POST['_wpnonce'];
 
         // Bail on nonce fail
-        if (! wp_verify_nonce($wpnonce)) {
-            return 'MF255';
-        }
+        /*if (! wp_verify_nonce($wpnonce)) {
+            wp_send_json_error('MF255');
+        }*/
 
         // Get request parameters
         $name = $_POST['name'];
@@ -58,13 +60,20 @@ class ContactFormConsume
 
         if ($parametersValid) {
             // Create request custom post type
+            $id = wp_insert_post([
+                'post_type'  => 'travels-contact',
+                'post_title' => Carbon::now()->format('d/m/Y') . ' : ' . $name
+            ]);
+            carbon_set_post_meta($id, 'travels_contact_name', $name);
+            carbon_set_post_meta($id, 'travels_contact_email', $email);
+            carbon_set_post_meta($id, 'travels_contact_phone', $phone);
+            carbon_set_post_meta($id, 'travels_contact_message', $message);
 
             // Send emails
 
-            // Return to route
         }
 
-        return 'MF255';
+        wp_send_json_success('MF000');
     }
 
     private function validateParameters($name, $email, $phone, $message)
