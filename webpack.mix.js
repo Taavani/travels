@@ -36,7 +36,10 @@ mix
 
 mix
     .copyDirectory('resources/images', 'public/images')
-    .copyDirectory('resources/fonts', 'public/fonts')
+    .copy(
+        'node_modules/linearicons/dist/web-font/fonts',
+        'public/fonts'
+    )
     .copy(
         'node_modules/@fortawesome/fontawesome-free/webfonts',
         'public/fonts'

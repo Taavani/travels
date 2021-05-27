@@ -9,12 +9,14 @@
         </p>
         <div class="row justify-content-lg-center">
             <div class="col-lg-10 col-xl-8">
-                <form class="rd-mailform rd-mailform_style-1 text-center" data-form-output="form-output-global"
-                      data-form-type="contact" method="post" action="https://travelstogreenland.com/en"
+                <form class="rd-mailform rd-mailform_style-1 text-center"
+                      data-form-output="form-output-global"
+                      data-form-type="contact" method="post" action="{{ esc_url( admin_url('admin-post.php') ) }}"
                       novalidate="novalidate">
-                    <input type="hidden" name="_token" value="djkicvAPmH4aibKC9B5pcH2ybn1aaCeKb4xZ7KaR">
+                    {!! $nounce !!}
+                    <input type="hidden" name="action" value="{{ $methodName }}">
                     <div class="form-wrap form-wrap_icon">
-                        <span class="novi-icon form-icon linear-icon-man"></span>
+                        <span class="lnr lnr-user form-icon"></span>
                         <input class="form-input form-control-has-validation" id="contact-name" type="text"
                                name="name" data-constraints="@Required" heap-ignore="true"><span
                                 class="form-validation"></span>
@@ -23,7 +25,7 @@
                         </label>
                     </div>
                     <div class="form-wrap form-wrap_icon">
-                        <span class="novi-icon form-icon linear-icon-envelope"></span>
+                        <span class="lnr lnr-envelope form-icon"></span>
                         <input class="form-input form-control-has-validation" id="contact-email" type="email"
                                name="email" data-constraints="@Email  @Required" heap-ignore="true"><span
                                 class="form-validation"></span>
@@ -32,7 +34,7 @@
                         </label>
                     </div>
                     <div class="form-wrap form-wrap_icon">
-                        <span class="novi-icon form-icon linear-icon-telephone"></span>
+                        <span class="lnr form-icon lnr-phone-handset"></span>
                         <input class="form-input form-control-has-validation" id="contact-phone" type="text"
                                name="phone" data-constraints="@Numeric" heap-ignore="true"><span
                                 class="form-validation"></span>
@@ -41,7 +43,7 @@
                         </label>
                     </div>
                     <div class="form-wrap form-wrap_icon">
-                        <span class="novi-icon form-icon linear-icon-feather"></span>
+                        <span class="lnr form-icon lnr-pencil"></span>
                         <textarea class="form-input form-control-has-validation" id="contact-message" name="message"
                                   data-constraints="@Required" heap-ignore="true"></textarea><span
                                 class="form-validation"></span>
@@ -49,30 +51,6 @@
                             Your message
                         </label>
                     </div>
-                    <script>
-                        window.addEventListener('load', () => {
-                            setTimeout(() => {
-                                document.querySelectorAll('input[data-purpose="honey_javascript"]')
-                                    .forEach(input => {
-                                        if (input.value.length > 0) {
-                                            return;
-                                        }
-
-                                        input.value = "eyJpdiI6IlpVSDVERjJzM0JISndjQnI4bU9JM0E9PSIsInZhbHVlIjoiR1VyM0M0UGgxb1daRHVTbTVKNEZldz09IiwibWFjIjoiOTA0NzRjNmJmNjc2MmZiZmExOTlkY2MyNGJiYjZiOGY5OWI5ODA4YzkwYzNkZjFhMTFhNzJmYWI4MGU1ZmQwMSJ9";
-                                        input.dispatchEvent(new Event('change'));
-                                    });
-                            }, 3000)
-                        });
-                    </script>
-                    <div style="display:  none ;">
-                        <input wire:model.lazy.defer="honeyInputs.honey_present" name="honey_present" value="">
-                        <input wire:model.lazy.defer="honeyInputs.honey_time" name="honey_time"
-                               value="eyJpdiI6IlRXaCtMUmlZVGZ3bHNTOUJRT3dXTWc9PSIsInZhbHVlIjoidjVtYVdmNVROU01jNzFKNEg5R3VGQmhwZytvc1ZzU2MwWUN3T1QyUktIST0iLCJtYWMiOiIyMDE3NDhhYjVkZWMyZTYwOWQwZGJlYjAwOTBlNTc5MDA1OGQ4OTBmNTk4ZDJjMDFjMjM0YTI5ZjVhNTliOTUxIn0=">
-                        <input wire:model.lazy.defer="honeyInputs.honey_javascript" data-purpose="honey_javascript"
-                               name="honey_javascript" value="">
-
-                    </div>
-
                     <button class="button button-primary" type="submit">
                         Send
                     </button>
