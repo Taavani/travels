@@ -41,6 +41,11 @@
       "App\\": "app/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
   "require": {
     "php": "^7.3|^8.0",
     "htmlburger/carbon-fields": "^3.3",
@@ -48,6 +53,7 @@
   },
   "require-dev": {
     "filp/whoops": "^2.9",
+    "phpunit/phpunit": "7.5",
     "squizlabs/php_codesniffer": "^3.5"
   },
   "suggest": {
@@ -65,6 +71,7 @@
     "lint": [
       "phpcs --extensions=php --standard=PSR12 app config"
     ],
+    "test": "@php ./vendor/phpunit/phpunit/phpunit",
     "post-autoload-dump": [
       "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
     ]
