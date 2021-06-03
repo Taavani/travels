@@ -60,3 +60,4 @@
 
     </div>
 </section>
+<div class="snackbars" id="form-output-global"></div>

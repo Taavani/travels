@@ -70,12 +70,18 @@ class ContactFormConsume
             carbon_set_post_meta($id, 'travels_contact_message', $message);
 
             // Send emails
-
         }
 
         wp_send_json_success('MF000');
     }
 
+    /**
+     * @param $name
+     * @param $email
+     * @param $phone
+     * @param $message
+     * @return bool
+     */
     private function validateParameters($name, $email, $phone, $message)
     {
         $valid = true;
