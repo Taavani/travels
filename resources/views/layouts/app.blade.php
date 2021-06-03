@@ -1,4 +1,4 @@
-<div class="page">
+<div>
     @include('partials.header')
 
     @yield('content')
