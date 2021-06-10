@@ -39,9 +39,9 @@
                 </div>
 
                 <div class="rd-navbar-nav-wrap">
-                    @if (has_nav_menu('primary_navigation'))
+                    @if (has_nav_menu('primary_navigation') && $isFrontPage)
                       {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'rd-navbar-nav', 'echo' => false]) !!}
-                    @else
+                    @elseif ($isFrontPage)
                         <div class="default-menu">
                             <ul class="rd-navbar-nav">
                                 <li>

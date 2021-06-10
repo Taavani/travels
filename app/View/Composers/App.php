@@ -32,7 +32,8 @@ class App extends Composer
             'siteName' => $this->siteName(),
             'siteDescription' => $this->siteTagLine(),
             'siteIcon' => $this->siteIcon(),
-            'siteUrl' => $this->siteUrl()
+            'siteUrl' => $this->siteUrl(),
+            'isFrontPage' => is_front_page()
         ];
     }
 
@@ -53,7 +54,7 @@ class App extends Composer
      */
     public function siteUrl(): string
     {
-        return get_site_url();
+        return get_home_url();
     }
 
     /**

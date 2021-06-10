@@ -8,10 +8,13 @@
             </div>
         </div>
     </section>
-    <section class="section parallax-container text-center parallax-header context-dark" data-parallax-img="/images/about/1-a-2400.jpg"><div class="material-parallax parallax"><img src="/images/about/1-a-2400.jpg" alt="" style="display: block; transform: translate3d(-50%, 262px, 0px);"></div>
-        <div class="parallax-content">
+    <section class="section parallax-container text-center parallax-header context-dark" data-parallax-img="{{ $backgroundImage }}">
+        <div class="material-parallax parallax">
+            <img src="{{ $backgroundImage }}" alt="" >
+        </div>
+        <div class="parallax-content" style="background: rgba(0, 0, 0, 0.5);">
             <div class="parallax-header__inner">
-                <div class="parallax-header__content" style="background-color: rgba(0,0,0,0.3)">
+                <div class="parallax-header__content">
                     <div class="container">
                         <div class="row row-fix justify-content-sm-center">
                             <div class="col-md-10 col-xl-8">
