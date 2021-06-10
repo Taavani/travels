@@ -21,7 +21,7 @@
                     <ul class="list-xs">
                         <li>
                             <dl class="list-terms-minimal">
-                                <dd><a href="https://travelstogreenland.com/en">Travels to Greenland</a></dd>
+                                <dd><a href="{{ $siteUrl }}">Travels to Greenland</a></dd>
                             </dl>
                         </li>
                         <li>
@@ -52,7 +52,9 @@
     <div class="footer-corporate novi-bg novi-bg-img">
         <div class="container">
             <div class="footer-corporate__inner">
-                <p class="rights"><a href="https://travelstogreenland.com/en"><span>#TravelsToGreenland</span> - <span>&nbsp;</span><span class="copyright-year">2021</span></a> - <a href="https://travelstogreenland.com/en/privacy">Privacy</a></p>
+                <p class="rights">
+                    <a href="{{ $siteUrl }}"><span>#TravelsToGreenland</span> - <span>&nbsp;</span><span class="copyright-year">2021</span></a>
+                    - <a href="{{ $siteUrl . '/privacy-policy' }}">Privacy</a></p>
                 <ul class="list-inline-xxs">
                     <li><a class="icon novi-icon icon-xxs icon-primary fab fa-instagram" target="_blank" href="https://www.instagram.com/travelstogreenland/"></a></li>
                 </ul>

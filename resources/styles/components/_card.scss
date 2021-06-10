@@ -13,7 +13,7 @@ $card-title-background: $white;
 $card-title-padding: 22px 0 20px;
 $card-title-sm-padding: 55px 0 55px 0;
 $card-active-background: transparent;
-$card-arrow: '\e937';
+$card-arrow: "";
 $card-arrow-font: 400 24px/24px $font-icons;
 $card-body-padding: 15px 25px 30px 0;
 $card-body-sm-padding: 30px 30px 22px 0;
@@ -72,7 +72,7 @@ $card-body-sm-padding: 30px 30px 22px 0;
         background: $card-title-background;
 
         &:before {
-          content: '\e936';
+          content: "";
           transform: translateY(-50%) rotate(180deg);
         }
       }
@@ -110,18 +110,20 @@ h3 + .card-custom-group-wrap {
       padding-right: 0;
 
       &:before {
-        content: "\e93c";
+        content: "\e876";
         top: 47%;
         left: 0;
         right: auto;
         transform: translateY(-50%) rotate(90deg);
         transition: .35s all ease-in-out;
+        font-family: "Linearicons-Free";
       }
 
       &.collapsed {
         &:before {
-          content: '\e93c';
+          content: "\e876";
           transform: translateY(-50%) rotate(0deg);
+          font-family: "Linearicons-Free";
         }
       }
 
