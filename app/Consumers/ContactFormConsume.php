@@ -5,6 +5,8 @@ namespace App\Consumers;
 use App\View\Composers\ContactForm;
 use Carbon\Carbon;
 
+use function Roots\view;
+
 /**
  * Class ContactFormConsume
  * @package App\Consumers
@@ -70,6 +72,19 @@ class ContactFormConsume
             carbon_set_post_meta($id, 'travels_contact_message', $message);
 
             // Send emails
+            $data = [
+                'appTitle' => "#TravelsToGreenland",
+                'url' => get_home_url(),
+                'ref' => $id,
+                'name' => $name,
+                'phone' => $phone,
+                'email' => $email,
+                'message' => $message,
+                'year'  => date('y'),
+                'allRights' => 'All rights reserved.'
+            ];
+
+            wp_mail($email, 'Test 2', view('emails/application/order', $data)->render());
         }
 
         wp_send_json_success('MF000');
