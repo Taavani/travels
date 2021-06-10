@@ -58,12 +58,12 @@ add_action('after_setup_theme', function () {
      * Enable features from the Soil plugin if activated.
      * @link https://roots.io/plugins/soil/
      */
-    add_theme_support('soil', [
+    /*add_theme_support('soil', [
         'clean-up',
         'nav-walker',
         'nice-search',
         'relative-urls'
-    ]);
+    ]);*/
 
     /**
      * Register the navigation menus.
