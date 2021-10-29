@@ -80,11 +80,23 @@ class ContactFormConsume
                 'phone' => $phone,
                 'email' => $email,
                 'message' => $message,
-                'year'  => date('y'),
+                'year'  => date('Y'),
                 'allRights' => 'All rights reserved.'
             ];
 
-            wp_mail($email, 'Test 2', view('emails/application/order', $data)->render());
+            // System email to TravelsToGreenland
+            wp_mail(
+                $email,
+                __('New enquery', 'travels'),
+                view('emails/application/order', $data)->render()
+            );
+
+            // System email to Customer
+            wp_mail(
+                $email,
+                __('Thank you for reaching out', 'travels'),
+                view('emails/application/received', $data)->render()
+            );
         }
 
         wp_send_json_success('MF000');
@@ -97,7 +109,7 @@ class ContactFormConsume
      * @param $message
      * @return bool
      */
-    private function validateParameters($name, $email, $phone, $message)
+    private function validateParameters($name, $email, $phone, $message): bool
     {
         $valid = true;
         if (! isset($name) || ! isset($email) || ! isset($phone) || ! isset($message)) {
