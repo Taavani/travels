@@ -48,7 +48,7 @@
   },
   "require": {
     "php": "^8.0",
-    "htmlburger/carbon-fields": "^3.3",
+    "htmlburger/carbon-fields": "^v3.3.2",
     "roots/acorn": "dev-main"
   },
   "require-dev": {

@@ -1,0 +1,21 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+.ttg-section {
+  @apply container mx-auto;
+}
+
+.ttg-inner-section {
+  @apply flex justify-center my-64;
+}
+
+.ttg-centered {
+  @apply w-2/3 mx-auto text-center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-black;
+}
+@import 'tailwindcss/utilities';
+

@@ -17,10 +17,17 @@ mix
     .browserSync('https://travelstogreenland.dev.anu.gl.test/');
 
 mix
-    .sass('resources/styles/app.scss', 'styles')
+    //.sass('resources/styles/app.scss', 'styles')
     .sass('resources/styles/editor.scss', 'styles')
     .options({
         processCssUrls: false
+    });
+
+mix
+    .sass('resources/styles/app-v2.scss', 'styles')
+    .options({
+        processCssUrls: false,
+        postCss: [require('tailwindcss')],
     });
 
 //mix

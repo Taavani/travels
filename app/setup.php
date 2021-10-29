@@ -27,6 +27,7 @@ add_action('wp_enqueue_scripts', function () {
     }
 
     wp_enqueue_style('travels/app.css', asset('styles/app.css')->uri(), false, null);
+    wp_enqueue_style('travels/app-v2.css', asset('styles/app-v2.css')->uri(), false, null);
 }, 100);
 
 /**

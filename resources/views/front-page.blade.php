@@ -26,36 +26,34 @@
             Klaus Eugenius - Visit Greenland
         </div>
     </section>
-    <section id="introduction" class="section novi-bg novi-bg-img section-xl bg-default text-center">
-        <div class="container">
-            <div class="row row-fix justify-content-lg-center">
-                <div class="col-lg-10 col-xl-8">
-                    <p>Let us help you</p>
+    <section id="introduction" class="ttg-section">
+        <div class="ttg-inner-section">
+            <div class="ttg-centered">
+                <p>Let us help you</p>
 
-                    <h4>We will create a tailored adventure for you</h4>
+                <h4>We will create a tailored adventure for you</h4>
 
-                    <p>
-                        It can be quite a challenge to find and get in contact with all the local tour
-                        operators,
-                        combining flights, boats and accommodation in order to create an unforgettable
-                        adventure in
-                        Greenland. We are ready to help you through these struggles.
-                    </p>
+                <p>
+                    It can be quite a challenge to find and get in contact with all the local tour
+                    operators,
+                    combining flights, boats and accommodation in order to create an unforgettable
+                    adventure in
+                    Greenland. We are ready to help you through these struggles.
+                </p>
 
-                    <h4>Our products</h4>
+                <h4>Our products</h4>
 
-                    <p>
-                        We currently offer two different services upon your travel to Greenland.
-                    </p>
+                <p>
+                    We currently offer two different services upon your travel to Greenland.
+                </p>
 
-                    <div class="group-lg">
-                        <a href="#product-feedback" data-scroll class="button button-primary">
-                            Feedback on existing itinerary
-                        </a>
-                        <a href="#product-itinerary" data-scroll class="button button-primary">
-                            Your custom itinerary
-                        </a>
-                    </div>
+                <div class="group-lg">
+                    <a href="#product-feedback" data-scroll class="button button-primary">
+                        Feedback on existing itinerary
+                    </a>
+                    <a href="#product-itinerary" data-scroll class="button button-primary">
+                        Your custom itinerary
+                    </a>
                 </div>
             </div>
         </div>
