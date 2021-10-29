@@ -44,12 +44,12 @@ class ContactFormConsume
         }
 
         $callbackURL = wp_get_referer();
-        $wpnonce = $_POST['_wpnonce'];
+        $wpNonce = $_POST['_wpnonce'];
 
         // Bail on nonce fail
-        /*if (! wp_verify_nonce($wpnonce)) {
+        if (! wp_verify_nonce($wpNonce)) {
             wp_send_json_error('MF255');
-        }*/
+        }
 
         // Get request parameters
         $name = $_POST['name'];
@@ -86,7 +86,7 @@ class ContactFormConsume
 
             // System email to TravelsToGreenland
             wp_mail(
-                $email,
+                'info@travelstogreenland.com',
                 __('New enquery', 'travels'),
                 view('emails/application/order', $data)->render()
             );
