@@ -43,11 +43,10 @@ class ContactFormConsume
             wp_send_json_error('MF255', '500');
         }
 
-        $callbackURL = wp_get_referer();
         $wpNonce = $_POST['_wpnonce'];
 
         // Bail on nonce fail
-        if (! wp_verify_nonce($wpNonce)) {
+        if (! wp_verify_nonce($wpNonce, ContactForm::METHOD)) {
             wp_send_json_error('MF255');
         }
 
