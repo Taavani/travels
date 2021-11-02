@@ -17,7 +17,7 @@ mix
     .browserSync('https://travelstogreenland.dev.anu.gl.test/');
 
 mix
-    //.sass('resources/styles/app.scss', 'styles')
+    .sass('resources/styles/app.scss', 'styles')
     .sass('resources/styles/editor.scss', 'styles')
     .options({
         processCssUrls: false
