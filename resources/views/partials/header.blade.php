@@ -46,10 +46,7 @@
                             <ul class="rd-navbar-nav">
                                 <li>
                                     <a href="#introduction">Introduction</a>
-                                </li>
-                                <li>
-                                    <a href="#meet-the-locals">Meet the locals</a>
-                                </li>
+                                </li>a
                                 <li>
                                     <a href="#the-seasons-are-changing">The season are changing</a>
                                 </li>

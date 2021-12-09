@@ -239,28 +239,6 @@
             </div>
         </div>
     </section>
-    <section id="meet-the-locals" class="section novi-bg bg-gray-lighter object-wrap">
-        <div class="section-xxl section-xxl_bigger">
-            <div class="container">
-                <div class="row row-fix">
-                    <div class="col-lg-5">
-                        <h3>We will connect you with the locals</h3>
-                        <p>
-                            Our itinerary is based on your wishes and the availability of the local
-                            tour operators. This way you get to support and experience the local
-                            community.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="novi-bg-img object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image"
-             style="background-image: url({{ $localsImage }})">
-        </div>
-        <div style="position: relative;top: -40px;color: white;padding-right: 20px;float: right;height: 0;">Photo
-            by Mads Pihl - Visit Greenland
-        </div>
-    </section>
     <section id="the-seasons-are-changing" class="section novi-bg novi-bg-img section-xl bg-accent">
         <div class="container">
             <div class="row row-fix justify-content-md-center flex-lg-row-reverse align-items-lg-center justify-content-lg-between row-50">
