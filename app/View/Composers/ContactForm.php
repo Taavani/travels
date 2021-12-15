@@ -3,6 +3,7 @@
 namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
+use WP_Post;
 
 class ContactForm extends Composer
 {
@@ -31,7 +32,7 @@ class ContactForm extends Composer
     }
 
     /**
-     * @return array|\WP_Post|null
+     * @return array|WP_Post|null
      */
     private function getPost()
     {
@@ -52,5 +53,4 @@ class ContactForm extends Composer
 
         return wp_nonce_field(self::METHOD, '_wpnonce', true, false);
     }
-
 }
