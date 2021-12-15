@@ -47,7 +47,7 @@
     }
   },
   "require": {
-    "php": "^8.0",
+    "php": "7.4|8.0",
     "htmlburger/carbon-fields": "^v3.3.2",
     "roots/acorn": "dev-main"
   },
