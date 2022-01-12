@@ -15,6 +15,7 @@ class Post extends Composer
         'partials.page-header',
         'partials.content',
         'partials.content-*',
+        'partials.page-sub'
     ];
 
     /**
@@ -40,9 +41,6 @@ class Post extends Composer
      */
     public function title()
     {
-        if ($this->view->name() !== 'partials.page-header') {
-            return get_the_title();
-        }
 
         if (is_home()) {
             if ($home = get_option('page_for_posts', true)) {
