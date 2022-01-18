@@ -16,18 +16,15 @@ use function Roots\asset;
  * @return void
  */
 add_action('wp_enqueue_scripts', function () {
-    $vendor = 'travels/bootstrap.js';
-    wp_enqueue_script($vendor, asset('scripts/bootstrap.js')->uri(), ['jquery'], null, true);
-    wp_enqueue_script('travels/app.js', asset('scripts/app.js')->uri(), [ $vendor, 'jquery' ], null, true);
+    wp_enqueue_script('travels/core.js', asset('scripts/core.min.js')->uri(), null, null, true);
+    wp_enqueue_script('travels/script.js', asset('scripts/script.js')->uri(), null, null, true);
 
-    wp_add_inline_script($vendor, asset('scripts/manifest.js')->contents(), 'before');
+    wp_enqueue_style('travels/bootstrap.css', asset('/styles/bootstrap.css'), false, null);
+    wp_enqueue_style('travels/style.css', asset('styles/style.css'), false, null);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
     }
-
-    wp_enqueue_style('travels/app.css', asset('styles/app.css')->uri(), false, null);
-    wp_enqueue_style('travels/app-v2.css', asset('styles/app-v2.css')->uri(), false, null);
 }, 100);
 
 /**
@@ -59,12 +56,12 @@ add_action('after_setup_theme', function () {
      * Enable features from the Soil plugin if activated.
      * @link https://roots.io/plugins/soil/
      */
-    /*add_theme_support('soil', [
+    add_theme_support('soil', [
         'clean-up',
         'nav-walker',
         'nice-search',
         'relative-urls'
-    ]);*/
+    ]);
 
     /**
      * Register the navigation menus.
