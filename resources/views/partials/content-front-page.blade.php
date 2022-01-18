@@ -3,10 +3,10 @@
     <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="true">
         <div class="swiper-wrapper">
             <div class="swiper-slide bg-gray-lighter" data-slide-bg="{{ $firstImage }}" data-swiper-slide-index="0" style="background-image: url({{ $firstImage }});">
-                <div class="swiper-slide-caption text-center">
+                <div class="swiper-slide-caption text-center" style="padding-top: 0px">
                     <div class="container">
-                        <h1 data-caption-animate="fadeInUpSmall"><span>Looking for a Greenlandic adventure?</span></h1>
-                        <h3 data-caption-animate="fadeInUpSmall" data-caption-delay="200">
+                        <h1 data-caption-animate="fadeInUpSmall" style="color: white"><span>Looking for a Greenlandic adventure?</span></h1>
+                        <h3 data-caption-animate="fadeInUpSmall" style="color: white" data-caption-delay="200">
                             <a href="{{ $siteUrl }}">#TravelsToGreenland</a> is here to help you on your way.
                         </h3>
                     </div>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <!-- Swiper Pagination-->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination d-none"></div>
         <!-- Swiper Navigation-->
         {{--
             <div class="swiper-button-prev linear-icon-chevron-left"></div>

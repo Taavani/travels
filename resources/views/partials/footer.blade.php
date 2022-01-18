@@ -60,12 +60,7 @@
                     - <a href="{{ $siteUrl . '/privacy-policy' }}">Privacy</a></p>
                 </p>
                 <ul class="list-inline-xxs">
-                    <li><a class="icon novi-icon icon-xxs icon-primary fa fa-facebook" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-xxs icon-primary fa fa-twitter" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-xxs icon-primary fa fa-google-plus" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-xxs icon-primary fa fa-vimeo" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-xxs icon-primary fa fa-youtube" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-xxs icon-primary fa fa-pinterest" href="#"></a></li>
+                    <li><a class="icon novi-icon icon-xxs icon-primary fa fa-instagram" target="_blank" href="https://www.instagram.com/travelstogreenland/"></a></li>
                 </ul>
             </div>
         </div>
