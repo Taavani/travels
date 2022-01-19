@@ -15,6 +15,7 @@ class Post extends Composer
         'partials.page-header',
         'partials.content',
         'partials.content-*',
+        'partials.page-sub'
     ];
 
     /**
@@ -25,7 +26,11 @@ class Post extends Composer
     public function override()
     {
         return [
+            'id'    => get_the_ID(),
+            'date'  => $this->date(),
             'title' => $this->title(),
+            'author' => get_the_author(),
+            'breadcrumbs' => $this->breadcrumbs()
         ];
     }
 
@@ -36,9 +41,6 @@ class Post extends Composer
      */
     public function title()
     {
-        if ($this->view->name() !== 'partials.page-header') {
-            return get_the_title();
-        }
 
         if (is_home()) {
             if ($home = get_option('page_for_posts', true)) {
@@ -65,5 +67,36 @@ class Post extends Composer
         }
 
         return get_the_title();
+    }
+
+    /**
+     * @return false|string
+     */
+    public function date()
+    {
+        return get_the_date('d-m-Y', get_the_ID());
+    }
+
+    /**
+     * @return array
+     */
+    public function breadcrumbs(): array
+    {
+        $breadcrumbs = collect([]);
+
+        $breadcrumbs->add([
+            'url' => get_option('home'),
+            'name' => get_bloginfo('name')
+        ]);
+
+        if (is_single() || is_page()) {
+            $breadcrumbs->add([
+               'url' => null,
+               'name' => $this->title()
+            ]);
+        }
+
+
+        return $breadcrumbs->toArray();
     }
 }

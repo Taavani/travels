@@ -39,6 +39,14 @@
         font-weight: 200;
     }
 
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
     .brand {
         font-family: "Relaway", sans-serif;
         color: #00b4f1;
@@ -50,6 +58,7 @@
 
     }
 </style>
+
 
 <table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
     <tr>
@@ -67,15 +76,29 @@
                 <tr>
                     <td class="body" width="100%" cellpadding="0" cellspacing="0">
                         <table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+
+                            <tr>
+                                <td class="header">
+                                    <a href="{{ $url }}" style="display: inline-block;">
+                                        <h2>New inquiry</h2>
+                                    </a>
+                                </td>
+                            </tr>
+
                             <!-- Body content -->
                             <tr>
                                 <td class="content-cell">
+
+                                    <p>
+                                        There is a new inquiry with reference: <span style="font-style: italic">{{ $ref }}</span>.
+                                    </p>
+
                                     <div class="table">
                                         <table>
                                             <thead>
                                             <tr>
-                                                <th></th>
-                                                <th>Values</th>
+                                                <th scope="col"></th>
+                                                <th scope="col">Values</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -101,23 +124,27 @@
 
                                 </td>
                             </tr>
+
+                            <!-- Footer -->
+                            <tr>
+                                <td>
+                                    <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
+                                        <tr>
+                                            <td class="content-cell" align="center">
+                                                © {{ $year }} <span class="brand">#TravelsToGreenland</span>. {{ $allRights }}
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
                         </table>
                     </td>
                 </tr>
-
-
             </table>
         </td>
     </tr>
 </table>
-
-<h2>New inquiry</h2>
-
-<p>
-    There is a new inquiry with reference: <span style="font-style: italic">{{ $ref }}</span>.
-</p>
-
-© {{ $year }} <span class="brand">#TravelsToGreenland</span>. {{ $allRights }}
 </body>
 </html>
 

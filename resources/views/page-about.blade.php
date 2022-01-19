@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-travel')
 
 @section('content')
     <section class="section novi-bg novi-bg-img breadcrumbs-custom">
@@ -45,4 +45,7 @@
             </div>
         </div>
     </section>
+
+    @include('partials.footer')
 @endsection
+

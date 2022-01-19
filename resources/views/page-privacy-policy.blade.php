@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-travel')
 
 @section('content')
     <div class="page">
@@ -91,4 +91,6 @@
             </div>
         </section>
     </div>
+
+    @include('partials.footer')
 @endsection

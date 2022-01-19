@@ -17,7 +17,7 @@ mix
     .browserSync('https://travelstogreenland.dev.anu.gl.test/');
 
 mix
-    .sass('resources/styles/app.scss', 'styles')
+    .sass('resources/styles/style.scss', 'styles')
     .sass('resources/styles/editor.scss', 'styles')
     .options({
         processCssUrls: false
@@ -39,11 +39,14 @@ mix
     .copy(
         'resources/fonts',
         'public/fonts'
-    )
-    .copy(
-        'node_modules/@fortawesome/fontawesome-free/webfonts',
-        'public/fonts'
     );
+
+mix
+    .copyDirectory('resources/css', 'public/styles')
+
+mix
+    .copy('resources/scripts/core.min.js', 'public/scripts')
+    .copy('resources/scripts/script.js', 'public/scripts')
 
 mix
     .sourceMaps()

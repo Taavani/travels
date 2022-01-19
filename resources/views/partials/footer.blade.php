@@ -1,14 +1,17 @@
+<!-- Page Footer-->
 <footer>
     <div class="pre-footer-corporate novi-bg novi-bg-img">
         <div class="container">
             <div class="row justify-content-sm-center justify-content-lg-start row-30 row-md-60">
                 <div class="col-sm-10 col-md-6 col-lg-10 col-xl-3">
                     <h6>About</h6>
+                    <p>
                     <p>Travels to Greenland are your local experts in Greenland. We will give you all the
                         insights on our beautiful country, assist you in planning the itinerary by connecting you directly to all the
                         locals, who will finalise payments.
 
-                        We are here to help you get the best experience of your visit to our beautiful country. Read <a href="{{ $siteUrl . '/about' }}">more</a></p>
+                        We are here to help you get the best experience of your visit to our beautiful country. Read <a href="{{ $siteUrl . '/about' }}">more</a>
+                    </p>
                 </div>
                 <div class="col-sm-10 col-md-6 col-lg-3 col-xl-3">
 
@@ -55,8 +58,9 @@
                 <p class="rights">
                     <a href="{{ $siteUrl }}"><span>#TravelsToGreenland</span> - <span>&nbsp;</span><span class="copyright-year">2021</span></a>
                     - <a href="{{ $siteUrl . '/privacy-policy' }}">Privacy</a></p>
+                </p>
                 <ul class="list-inline-xxs">
-                    <li><a class="icon novi-icon icon-xxs icon-primary fab fa-instagram" target="_blank" href="https://www.instagram.com/travelstogreenland/"></a></li>
+                    <li><a class="icon novi-icon icon-xxs icon-primary fa fa-instagram" target="_blank" href="https://www.instagram.com/travelstogreenland/"></a></li>
                 </ul>
             </div>
         </div>
