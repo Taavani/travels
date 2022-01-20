@@ -10,7 +10,7 @@ else
 fi
 
 echo "Exporting production database on remote server."
-ssh travelstogreenland@172.105.68.33 wp db export --add-drop-table travelstogreenland.sql --path='files/' &> /dev/null
+ssh travelstogreenland@172.105.68.33 wp db export --add-drop-table travelstogreenland.sql --path='files/web/wp/' &> /dev/null
 
 echo "Downloading production export to local."
 scp -r travelstogreenland@172.105.68.33:/sites/travelstogreenland.com/travelstogreenland.sql storage/dev/

@@ -42,7 +42,7 @@ class FrontPage extends Composer
         ];
     }
 
-    private function firstImage(): string
+    public static function firstImage(): string
     {
         return asset('images/main-2400.tiff')->uri();
     }

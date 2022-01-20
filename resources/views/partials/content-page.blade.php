@@ -1,19 +1,21 @@
 @include('partials.page-sub')
 
+@if($featuredImage)
+<section class="section novi-bg novi-bg-img section-xxl text-center bg-image-6" style='background-image: url("{{ $featuredImage }}");'>
+    <div class="container nonstandart-post-header">
+        <h2>{{ $title }}</h2>
+    </div>
+</section>
+@endif
+
 <section class="section novi-bg novi-bg-img bg-default section-lg">
     <div class="container">
         <div class="row row-fix row-60 justify-content-sm-center">
             <div class="col-lg-8 section-divided__main group-post">
                 <div class="section-md post-single-body">
+                    @if(!$featuredImage)
                     <h3>{{ $title }}</h3>
-                    <div class="post-meta d-none">
-                        <div class="group">
-                            <a href="standard-post.html">
-                                <time datetime="{{ $date }}">{{ $date }}</time>
-                            </a>
-                            <a class="meta-author" href="">by {{ $author }}</a>
-                        </div>
-                    </div>
+                    @endif
 
                     @php(the_content())
 

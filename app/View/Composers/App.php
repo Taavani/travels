@@ -33,7 +33,8 @@ class App extends Composer
             'siteDescription' => $this->siteTagLine(),
             'siteIcon' => $this->siteIcon(),
             'siteUrl' => $this->siteUrl(),
-            'isFrontPage' => is_front_page()
+            'isFrontPage' => is_front_page(),
+	        'firstImage' => FrontPage::firstImage(),
         ];
     }
 
